@@ -10,7 +10,7 @@ class PlotBarGraph extends React.Component {
 		var BarGroupTooltip = require('react-d3-tooltip').BarGroupTooltip;
 		var data = JSON.parse(this.props.data);
 		var width = 700, height = 400;
-	    var chartSeries = [{field: 'TMAX', name: 'TMAX'}, {field: 'TMIN', name: 'TMIN'}];
+	    var chartSeries = [{field: 'TMAX', name: 'TMAX', color: '#208FED'}, {field: 'TMIN', name: 'TMIN', color: '#AC5BCB'}];
 	    var x = function(d) {
 	    	return moment(d.DATE, 'YYYYMMDD').format('YYYY-MM-DD');
 	    };
