@@ -63,3 +63,16 @@ body {
   border: none;
   color: #a94442;
 }
+.plotName {
+  padding: 10px;
+  align-content: center;
+  font: 10px black;
+  margin: 40px auto;
+  font-size: 30px;
+  border: 1px solid black;
+  background: lightgray;
+  width: 750px;
+}
+.plotGraph {
+
+}

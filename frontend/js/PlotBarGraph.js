@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-class InternalApi extends React.Component {
+class PlotBarGraph extends React.Component {
 	constructor(props, context) {
 		super(props, context);
 	}
@@ -18,24 +18,24 @@ class InternalApi extends React.Component {
 	    var xLabel = "Date";
 	    var yLabel = "Temperature";
 	    var yLabelPosition = "right";
-	    var yTickFormat = d3.format(".2s");
+	    var yTickFormat = d3.format(".1s");
 	    var dataAvailable = data.length;
 		return (
 			<div>
-				{ dataAvailable 
-					? (<BarGroupTooltip
-						title= 'Santosh Forecast API'
-						data= {data}
-						width= {width}
-						height= {height}
-						chartSeries = {chartSeries}
-						x = {x}
-						xScale= {xScale}
-						yTickFormat= {yTickFormat} />)
-					: null }
-			</div>
-		);
+			{ dataAvailable ? (<div><div className="plotName">{this.props.title}</div>
+			<div className="plotGraph">
+				<BarGroupTooltip
+					title= 'Santosh Forecast API'
+					data= {data}
+					width= {width}
+					height= {height}
+					chartSeries = {chartSeries}
+					x = {x}
+					xScale= {xScale}
+					yTickFormat= {yTickFormat} />
+			</div></div>) : null}
+		</div>);
 	}
 }
 
-export default InternalApi;
+export default PlotBarGraph;
